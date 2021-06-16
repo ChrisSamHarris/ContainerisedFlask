@@ -8,10 +8,8 @@ spec:
   ports:
   - protocol: "TCP"
     port: 6000
-    targetPort: 5001
-    name: python-loadbalancer-service
+    targetPort: 5000
   type: LoadBalancer
-  # Code taken directly from k8s service but this doesnt work
 
 ---
 apiVersion: apps/v1
@@ -33,4 +31,4 @@ spec:
         image: hello-python:latest
         imagePullPolicy: Never
         ports:
-        - containerPort: 5001
+        - containerPort: 5000
