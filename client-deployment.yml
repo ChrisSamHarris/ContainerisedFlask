@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-python
+  labels: 
+    component: flaskapp
+spec:
+  containers:
+  - name: hello-python
+    image: hello-python
+    ports:
+    - containerPort: 5000
